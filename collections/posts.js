@@ -41,7 +41,7 @@ PostsSchema = new SimpleSchema({
   },
   price: {
     type: Number,
-    label: 'Last date this book was checked out',
+    label: 'Price',
     decimal: true // this allows floating points
   },
   location: {
