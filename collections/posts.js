@@ -25,12 +25,12 @@ PostsSchema = new SimpleSchema({
     label: 'Post Type',
     allowedValues: ['looking', 'offering'],
     autoform: {
-      firstOption: 'Peale select something',
+      type: 'select-radio-inline',
+      defaultValue: 'looking',
       options: [
                 { label: 'Looking', value: 'looking' },
                 { label: 'Offer', value: 'offering' }
                ],
-      noselect: true
     }
   },
   space: {
