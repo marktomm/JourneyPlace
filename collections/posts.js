@@ -16,7 +16,7 @@ Posts.allow({
 // aldeed:simpleschema schema will be used for autoform form
 // generation and validation
 PostsSchema = new SimpleSchema({
-  title: {
+  preferences: {
     type: String,
     label: 'Preferences'
   },
@@ -37,12 +37,12 @@ PostsSchema = new SimpleSchema({
     type: Number,
     label: 'Space (square meters)',
     min: 0,
-    decimal: true // this allow floating points
+    decimal: true // this allows floating points
   },
   price: {
     type: Number,
     label: 'Last date this book was checked out',
-    decimal: true // this allow floating points
+    decimal: true // this allows floating points
   },
   location: {
     type: String,
