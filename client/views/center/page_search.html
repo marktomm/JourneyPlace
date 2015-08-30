@@ -1,3 +1,10 @@
-<template name="pageSearch">
-  
+<template name="pageSearch">  
+  {{#if Template.subscriptionsReady}}
+    {{# each searchPosts}}
+      {{> elemPost}}
+    {{/each}}
+  {{else}}
+      <p>Loading...</p>
+  {{/if}}
+
 </template>

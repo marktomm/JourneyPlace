@@ -1,10 +1,11 @@
 <template name="header">
   <nav class="navbar navbar-default">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">JourneyPlace</a>
+      <a class="navbar-brand" href="{{pathFor route='indexPage'}}">JourneyPlace</a>
     </div>
     <div>
       <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{pathFor route='searchPage'}}">All posts</a></li>
         <li>{{> atNavButton}}</li>
       </ul>
     </div>

@@ -57,3 +57,9 @@ PostsSchema = new SimpleSchema({
 
 // aldeed:collection2 package lets us do this
 Posts.attachSchema(PostsSchema);
+
+if(Meteor.isServer){
+  Meteor.publish('all_posts', function() {
+      return Posts.find();
+  });
+}
