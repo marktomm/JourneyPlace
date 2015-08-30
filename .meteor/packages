@@ -14,3 +14,6 @@ service-configuration
 useraccounts:bootstrap
 accounts-password
 useraccounts:flow-routing
+aldeed:autoform
+aldeed:collection2
+matb33:collection-hooks
