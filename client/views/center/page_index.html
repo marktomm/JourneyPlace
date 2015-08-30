@@ -1,0 +1,8 @@
+<template name="pageIndex">
+  {{#if currentUser}}
+    <p>
+      {{currentUser.services.facebook.name}} -
+      {{currentUser.services.facebook.gender}}
+    </p>
+  {{/if}}
+</template>
