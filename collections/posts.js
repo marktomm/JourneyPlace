@@ -1,4 +1,4 @@
-Posts = new Mongo.Collection('name'); 
+Posts = new Mongo.Collection('posts'); 
 
 // TODO: Implement proper security here if will be used in production
 Posts.allow({ 
