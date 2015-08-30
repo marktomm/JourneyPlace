@@ -1,9 +1,15 @@
 <template name="pageIndex">
-  {{#if currentUser}}
-    <p>
-      {{currentUser.services.facebook.name}} -
-      {{currentUser.services.facebook.gender}}
-    </p>
+  
+  {{#if Template.subscriptionsReady}}
+    {{#if currentUser.services.facebook}}
+      <p>
+        {{currentUser.services.facebook.name}} -
+        {{currentUser.services.facebook.gender}}
+      </p>
+    {{/if}}
+    {{log}}
+  {{else}}
+      <p>Loading...</p>
   {{/if}}
   
   {{> pagePostForm}}
