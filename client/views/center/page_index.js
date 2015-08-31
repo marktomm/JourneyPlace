@@ -8,7 +8,7 @@ Template.pageIndex.onCreated(function() {
 
 
 Template.pageIndex.helpers({
-  log: function(){
-    console.log(Meteor.user());
-  }
+  // log: function(){
+  //   console.log(Meteor.user());
+  // }
 });
