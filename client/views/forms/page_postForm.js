@@ -72,11 +72,9 @@ AutoForm.hooks({
             return false;
           }
           
-          // append user id to post here or whatever
-          // You have to make changes in the schema in order for this to work
-          // doc = _.extend(doc, {
-          //   userId: Meteor.userId()
-          // });
+          doc = _.extend(doc, {
+            ownerId: Meteor.userId()
+          });
         }
 
         // return doc indicated that everythng is ok and we proceed with

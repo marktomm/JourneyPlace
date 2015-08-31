@@ -52,6 +52,13 @@ PostsSchema = new SimpleSchema({
   pets: {
     type: Boolean,
     label: 'Pets'
+  },
+  ownerId: {
+    type: String,
+    regEx: SimpleSchema.RegEx.Id,
+    autoform: {
+      type: 'hidden'
+    }
   }
 });
 
