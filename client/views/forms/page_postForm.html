@@ -1,3 +1,14 @@
 <template name="pagePostForm">
+  {{#if userLoginAlert}}
+    {{> widgetAlertMessage text="You must login to craete a post"}}
+  {{/if}}
   {{> quickForm collection="Posts" id="PostsSearchOrInsert" type="insert"}}
+</template>
+
+<template name="widgetAlertMessage">
+  <div class="alert alert-danger" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only">Error:</span>
+    {{text}}
+  </div>
 </template>
