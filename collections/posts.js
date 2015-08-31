@@ -69,4 +69,19 @@ if(Meteor.isServer){
   Meteor.publish('all_posts', function() {
       return Posts.find();
   });
+  
+  Meteor.publish('my_offers', function() {
+    if(this.userId) {
+      var userOffers = Meteor.users.find({_id: this.userId}, {fields: {offerIds: 1}}).fetch()[0].offerIds;
+      return Posts.find({
+        _id: { $in: userOffers }
+      });
+    }
+  });
 }
+
+// before/after hooks are from matb33:collection-hooks
+Posts.after.insert(function(userId, doc) {
+  if(doc.postType == 'offering' && Meteor.isClient)
+    Meteor.users.update({_id: userId}, { $push: { offerIds: doc._id } });
+});
